@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">
+        <ion-icon slot="icon-only" name="close-sharp"></ion-icon>
+        </ion-button>
+    </ion-buttons>
+    <ion-title>Please submit your expense</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+    <ion-item *ngFor="let input of formInputs">
+      <ion-label position="stacked">{{ input.label }}</ion-label>
+      <ion-input
+      [type]="input.type"
+      [placeholder]="input.label"
+      [(ngModel)]="input.model"
+      ></ion-input>
+    </ion-item>
+</ion-content>
